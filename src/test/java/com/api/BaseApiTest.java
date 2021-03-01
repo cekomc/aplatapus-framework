@@ -10,9 +10,6 @@ import io.restassured.http.ContentType;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import io.restassured.response.ResponseBody;
 
 import java.awt.image.BufferedImage;
 import java.io.File;
@@ -30,9 +27,7 @@ import java.util.Scanner;
 import javax.imageio.ImageIO;
 
 import static io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchemaInClasspath;
-import static io.restassured.module.jsv.JsonSchemaValidator.reset;
 import static org.testng.AssertJUnit.assertEquals;
-import static org.testng.AssertJUnit.assertFalse;
 import static org.testng.AssertJUnit.assertTrue;
 
 public class BaseApiTest {
