@@ -3,15 +3,6 @@ static def api_tests_defaults(job, String pathToSuiteXml){
     job.with {
         description('Testing API\'s')
 
-        wappers{
-            timeout {
-                noActivity(300)
-                failBuild()
-                writeDescription('Build failed due to no activity after 5 min')
-            }
-            timestamps()
-        }
-
         logRotator(30, 15, -1, -1)
 
         goals('clean surefire-report:report -Dsurefire.suiteXmlFiles=' + pathToSuiteXml)
