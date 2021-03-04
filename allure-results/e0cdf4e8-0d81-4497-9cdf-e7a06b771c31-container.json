@@ -1,0 +1,1 @@
+{"uuid":"e0cdf4e8-0d81-4497-9cdf-e7a06b771c31","name":"com.api.agify.AgifyTest","children":["2fed6bf9-a444-4c06-a176-433571912b02"],"befores":[{"name":"getName","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1614869601316,"stop":1614869601395}],"afters":[],"links":[],"start":1614869601295,"stop":1614869634627}

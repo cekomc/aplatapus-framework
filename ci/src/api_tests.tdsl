@@ -1,20 +1,28 @@
-job('demo') {
-    steps {
-        shell('echo Hello World!')
+
+static def api_tests_defaults(job, String pathToSuiteXml){
+    job.with {
+        description('Testing API\'s')
+
+        wappers{
+            timeout {
+                noActivity(300)
+                failBuild()
+                writeDescription('Build failed due to no activity after 5 min')
+            }
+            timestamps()
+        }
+
+        logRotator(30, 15, -1, -1)
+
+        goals('clean surefire-report:report -Dsurefire.suiteXmlFiles=' + pathToSuiteXml)
+
+        triggers {
+            cron("0 23 * * *")
+        }
     }
 }
 
-pipelineJob('github-demo') {
-    definition {
-        cpsScm {
-            scm {
-                git {
-                    remote {
-                        github('ci/src/api_tests.tdsl')
-                    }
-                }
-            }
-            scriptPath('ci/src/api_tests.tdsl')
-        }
-    }
+mavenJob("API_TEST"){
+    api_tests_defaults(delegate, 'src/test/resources/api/Automation.xml')
+    goals('clean install')
 }

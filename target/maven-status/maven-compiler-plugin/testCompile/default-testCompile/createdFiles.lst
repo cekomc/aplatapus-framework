@@ -1,0 +1,5 @@
+com/api/components/ApiConstants$BaseUris.class
+com/api/BaseApiTest.class
+com/api/agify/AgifyTest.class
+com/api/components/ApiConstants.class
+com/api/components/ApiConstants$Endpoints.class

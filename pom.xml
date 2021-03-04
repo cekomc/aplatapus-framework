@@ -3,42 +3,6 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <repositories>
-        <repository>
-            <id>central</id>
-            <url>http://artifact.stage.shutterfly.com:8081/artifactory/sfly-repos</url>
-            <snapshots>
-                <enabled>false</enabled>
-            </snapshots>
-        </repository>
-        <repository>
-            <id>snapshots</id>
-            <url>http://artifact.stage.shutterfly.com:8081/artifactory/sfly-repos</url>
-            <releases>
-                <enabled>false</enabled>
-            </releases>
-        </repository>
-        <repository>
-            <id>jenkins</id>
-            <url>https://repo.jenkins-ci.org/public/</url>
-        </repository>
-    </repositories>
-    <pluginRepositories>
-        <pluginRepository>
-            <id>central</id>
-            <url>http://artifact.stage.shutterfly.com:8081/artifactory/plugins-releases</url>
-            <snapshots>
-                <enabled>false</enabled>
-            </snapshots>
-        </pluginRepository>
-        <pluginRepository>
-            <id>snapshots</id>
-            <url>http://artifact.stage.shutterfly.com:8081/artifactory/plugins-snapshots</url>
-            <releases>
-                <enabled>false</enabled>
-            </releases>
-        </pluginRepository>
-    </pluginRepositories>
     <build>
         <plugins>
             <plugin>
@@ -153,28 +117,11 @@
             <scope>test</scope>
         </dependency>
         <dependency>
-            <groupId>com.shutterfly.devops</groupId>
-            <artifactId>jenkins-dsl-policies</artifactId>
-            <version>2.0.0-SNAPSHOT</version>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>javaposse-jobdsl</groupId>
-            <artifactId>job-dsl-core</artifactId>
-            <version>1.34</version>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
             <groupId>org.codehaus.groovy</groupId>
             <artifactId>groovy-all</artifactId>
             <!-- version same as the sfly jenkins dsl policies project -->
             <version>2.4.0</version>
             <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>javax.jcr</groupId>
-            <artifactId>javax.jcr</artifactId>
-            <version>2.0.0</version>
         </dependency>
         <dependency>
             <groupId>org.apache.jackrabbit</groupId>
@@ -230,11 +177,6 @@
             <groupId>io.qameta.allure</groupId>
             <artifactId>allure-testng</artifactId>
             <version>2.13.5</version>
-        </dependency>
-        <dependency>
-            <groupId>org.jenkins-ci.plugins</groupId>
-            <artifactId>job-dsl-core</artifactId>
-            <version>1.76</version>
         </dependency>
     </dependencies>
 </project>

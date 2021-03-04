@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2021-03-04T22:09:30Z" name="Surefire suite" finished-at="2021-03-04T22:10:05Z" duration-ms="35729">
+    <groups>
+    </groups>
+    <test started-at="2021-03-04T22:09:30Z" name="Surefire test" finished-at="2021-03-04T22:10:05Z" duration-ms="35729">
+      <class name="com.api.agify.AgifyTest">
+        <test-method is-config="true" signature="getName(java.lang.String)[pri:0, instance:com.api.agify.AgifyTest@3eba57a7]" started-at="2021-03-05T00:09:30Z" name="getName" finished-at="2021-03-05T00:09:30Z" duration-ms="70" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[ENV_ENUM]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getName -->
+        <test-method is-config="true" signature="setTestData([Ljava.lang.Object;)[pri:0, instance:com.api.agify.AgifyTest@3eba57a7]" started-at="2021-03-05T00:09:30Z" name="setTestData" finished-at="2021-03-05T00:09:30Z" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[Ljava.lang.Object;@6cbbb9c4]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setTestData -->
+        <test-method signature="getName([Ljava.lang.String;)[pri:0, instance:com.api.agify.AgifyTest@3eba57a7]" started-at="2021-03-05T00:09:30Z" name="getName" data-provider="testData" finished-at="2021-03-05T00:10:05Z" duration-ms="35568" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[Ljava.lang.String;@321ca237]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getName -->
+      </class> <!-- com.api.agify.AgifyTest -->
+    </test> <!-- Surefire test -->
+  </suite> <!-- Surefire suite -->
+</testng-results>
