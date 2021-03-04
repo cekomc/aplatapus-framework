@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.shutterfly.devops:jenkins-dsl-policies:2.0.0-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/shutterfly/devops/jenkins-dsl-policies/2.0.0-SNAPSHOT/jenkins-dsl-policies-2.0.0-20210216.190550-817.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/com/shutterfly/devops/jenkins-dsl-policies/2.0.0-SNAPSHOT/jenkins-dsl-policies-2.0.0-20210216.190550-817-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/shutterfly/devops/jenkins-dsl-policies/2.0.0-SNAPSHOT/jenkins-dsl-policies-2.0.0-20210216.190550-817-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

@@ -1,0 +1,12 @@
+<!DOCTYPE suite SYSTEM "http://beust.com/testng/testng-1.0.dtd" >
+<suite name="AutomationSuit">
+
+    <parameter name="baseUri" value="${baseUri}"/>
+
+    <test name="test_assetAssetversionmap">
+        <classes>
+            <class name="com.api.agify.AgifyTest"/>
+        </classes>
+    </test>
+
+</suite>

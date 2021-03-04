@@ -1,0 +1,41 @@
+import policies.sfly.SflyDefaults
+import policies.tre.TreDefaults
+
+static def api_tests_defaults(job, String pathToSuiteXml){
+    job.with {
+        description('Testing API\'s')
+
+        scm{
+            TreDefaults.git(delegate, Defs.REPO)
+        }
+
+        wappers{
+            timeout {
+                noActivity(300)
+                failBuild()
+                writeDescription('Build failed due to no activity after 5 min')
+            }
+            timestamps()
+        }
+
+        logRotator(30, 15, -1, -1)
+
+        goals('clean surefire-report:report -Dsurefire.suiteXmlFiles=' + pathToSuiteXml)
+
+        triggers {
+            cron("0 23 * * *")
+        }
+
+        publishers{
+            archiveArtifacts{
+                pattern("target/surefire-reports/**/*")
+            }
+            SflyDefaults.emailTriggers(delegate, Defs.EMAIL_ALERT)
+        }
+    }
+}
+
+mavenJob("API_TEST"){
+    api_tests_defaults(delegate, 'src/test/resources/api/Automation.xml')
+    goals(Defs.addEnvironmentGoal(Defs.API_ENVIRONMENTS.DEV, "SERVICE"))
+}

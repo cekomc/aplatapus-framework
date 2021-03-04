@@ -1,0 +1,11 @@
+
+// enables jenkins dsl support for the scripts in Intellij
+// make sure intellij is setup to recognize files with .dsl extension as groovy scripts
+// Go to Preferences > Editor > File Types and set *.tdsl, *.dsl, *.idea as registered patterns for Groovy
+
+def jobPath = /.*\/ci\/.*\.dsl/
+
+def ctx = context(pathRegexp: jobPath)
+contributor(ctx, {
+    delegatesTo(findClass('javaposse.jobdsl.dsl.DslFactory'))
+})
