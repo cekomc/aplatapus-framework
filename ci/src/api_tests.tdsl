@@ -1,13 +1,7 @@
-import policies.sfly.SflyDefaults
-import policies.tre.TreDefaults
 
 static def api_tests_defaults(job, String pathToSuiteXml){
     job.with {
         description('Testing API\'s')
-
-        scm{
-            TreDefaults.git(delegate, Defs.REPO)
-        }
 
         wappers{
             timeout {
