@@ -3,7 +3,13 @@ static def api_tests_defaults(job, String pathToSuiteXml){
     job.with {
         description('Testing API\'s')
 
-        scm('https://github.com/cekomc/aplatapus-framework.git')
+        definition {
+            cpsScm {
+                scm {
+                    git('https://github.com/jenkinsci/job-dsl-plugin.git')
+                }
+            }
+        }
 
         logRotator(30, 15, -1, -1)
 

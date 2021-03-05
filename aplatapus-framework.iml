@@ -37,10 +37,7 @@
     <orderEntry type="library" name="Maven: log4j:log4j:1.2.17" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: commons-io:commons-io:2.6" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.apache.commons:commons-lang3:3.8.1" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Maven: com.shutterfly.devops:jenkins-dsl-policies:2.0.0-SNAPSHOT" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Maven: javaposse-jobdsl:job-dsl-core:1.34" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.codehaus.groovy:groovy-all:2.4.0" level="project" />
-    <orderEntry type="library" name="Maven: javax.jcr:javax.jcr:2.0.0" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.apache.jackrabbit:jackrabbit-api:2.19.3" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.jetbrains:annotations:16.0.3" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.apache.jackrabbit:jackrabbit-core:2.19.4" level="project" />
@@ -115,5 +112,6 @@
     <orderEntry type="library" name="Maven: io.qameta.allure:allure-java-commons:2.13.5" level="project" />
     <orderEntry type="library" name="Maven: io.qameta.allure:allure-model:2.13.5" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Maven: org.jooq:joor-java-8:0.9.10" level="project" />
+    <orderEntry type="library" name="Maven: org.jenkins-ci.plugins:job-dsl-core:1.66" level="project" />
   </component>
 </module>
