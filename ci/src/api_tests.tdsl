@@ -3,7 +3,7 @@ mavenJob('example') {
     logRotator(-1, 10)
     jdk('Java 8')
     scm {
-        github('https://github.com/cekomc/aplatapus-framework.git', 'master')
+        github('cekomc/aplatapus-framework', 'master')
     }
     triggers {
         githubPush()
