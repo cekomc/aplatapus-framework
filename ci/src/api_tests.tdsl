@@ -1,27 +1,12 @@
 
-static def api_tests_defaults(job, String pathToSuiteXml){
-    job.with {
-        description('Testing API\'s')
-
-        definition {
-            cpsScm {
-                scm {
-                    git('https://github.com/jenkinsci/job-dsl-plugin.git')
-                }
-            }
-        }
-
-        logRotator(30, 15, -1, -1)
-
-        goals('clean surefire-report:report -Dsurefire.suiteXmlFiles=' + pathToSuiteXml)
-
-        triggers {
-            cron("0 23 * * *")
-        }
+mavenJob('example') {
+    logRotator(-1, 10)
+    jdk('Java 8')
+    scm {
+        github('https://github.com/cekomc/aplatapus-framework.git', 'master')
     }
-}
-
-mavenJob("API_TEST"){
-    api_tests_defaults(delegate, 'src/test/resources/api/Automation.xml')
-    goals('clean install')
+    triggers {
+        githubPush()
+    }
+    goals('clean test')
 }
